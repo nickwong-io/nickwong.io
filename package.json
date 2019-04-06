@@ -9,14 +9,10 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/niwong/niwong.github.io.git"
+    "url": "git+https://github.com/nickwong-io/nickwong-io.github.io.git"
   },
   "author": "Nick Wong",
   "license": "ISC",
-  "bugs": {
-    "url": "https://github.com/niwong/niwong.github.io/issues"
-  },
-  "homepage": "https://github.com/niwong/niwong.github.io#readme",
   "devDependencies": {
     "browser-sync": "^2.26.3",
     "gulp": "^3.9.1",

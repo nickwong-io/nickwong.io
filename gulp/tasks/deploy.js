@@ -4,7 +4,6 @@ var gulp    = require('gulp'),
 
 gulp.task('deploy', function() {
   return gulp.src('./dist/**/*').pipe(ghPages({
-    remoteUrl: "git@github.com/nickwong-io/nickwong-io.github.io.git",
     branch: "gh-pages"
   }));
 });
