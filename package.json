@@ -1,7 +1,7 @@
 {
-  "name": "niwong.github.io",
+  "name": "nickwong.io",
   "version": "1.0.0",
-  "description": "A website for my portfolio",
+  "description": "A website for Nick Wong student entrepreneur",
   "main": "gulpfile.js",
   "scripts": {
     "start": "gulp",
@@ -16,6 +16,7 @@
   "devDependencies": {
     "browser-sync": "^2.26.3",
     "gulp": "^3.9.1",
+    "gulp-clean-css": "^4.2.0",
     "gulp-gh-pages": "^0.5.4",
     "gulp-sass": "^4.0.2",
     "node-sass": "^4.12.0",

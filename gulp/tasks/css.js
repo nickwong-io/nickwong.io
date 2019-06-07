@@ -3,6 +3,7 @@
 var gulp              = require('gulp'),
     paths             = require('../config').paths,
     errorHandler      = require('../config').swallowError,
+    cleanCSS 		  = require('gulp-clean-css'),
     sass 			  = require('gulp-sass');
 //     browserReqs       = require('../config').browserReqs,
 //     sourcemaps        = require('gulp-sourcemaps'),
@@ -32,5 +33,6 @@ gulp.task('css', function() {
 //       ];
   return gulp.src(paths.src.scss + "/**/*.scss")
     .pipe(sass().on('error', sass.logError))
+    .pipe(cleanCSS({compatibility: 'ie8'}))
     .pipe(gulp.dest(paths.dist.css));
 });
