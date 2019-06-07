@@ -1,6 +1,9 @@
+'use strict';
+
 var gulp              = require('gulp'),
     paths             = require('../config').paths,
-    errorHandler      = require('../config').swallowError
+    errorHandler      = require('../config').swallowError,
+    sass 			  = require('gulp-sass');
 //     browserReqs       = require('../config').browserReqs,
 //     sourcemaps        = require('gulp-sourcemaps'),
 //     postcss           = require('gulp-postcss'),
@@ -12,6 +15,8 @@ var gulp              = require('gulp'),
 //     postcssNested     = require('postcss-nested'),
 //     postcssPXtoREM    = require('postcss-pxtorem'),
 //     postcssSimpleVars = require('postcss-simple-vars');
+
+sass.compiler = require('node-sass');
 
 gulp.task('css', function() {
 
@@ -25,11 +30,7 @@ gulp.task('css', function() {
 //         autoprefixer({ browsers: browserReqs }),
 //         lost
 //       ];
-
-  return gulp.src(paths.src.css + "/**/*.css")
-    // .pipe(sourcemaps.init())
-    // .pipe(postcss(postCSSProcessors).on('error', errorHandler))
-    // .pipe(sourcemaps.write('maps'))
-    .pipe(gulp.dest(paths.dist.css))
-    .on('error', errorHandler)
+  return gulp.src(paths.src.scss + "/**/*.scss")
+    .pipe(sass().on('error', sass.logError))
+    .pipe(gulp.dest(paths.dist.css));
 });

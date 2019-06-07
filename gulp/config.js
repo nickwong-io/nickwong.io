@@ -13,6 +13,7 @@ var paths = {
 };
 
 paths.src = {
+  scss: paths.base.src + 'assets/scss',
   css: paths.base.src + 'assets/css',
   fonts: paths.base.src + 'assets/fonts',
   js: paths.base.src + 'assets/js',

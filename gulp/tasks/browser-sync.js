@@ -22,8 +22,9 @@ gulp.task('watch', ['browsersync'], function() {
   var watching = true;
   gulp.watch(paths.src.html + "/**/*.html", ['html']);
   gulp.watch(paths.src.images + "/**/*.svg", ['html']);
-  gulp.watch(paths.src.css + "/**/*", ['css']);
+  gulp.watch(paths.src.scss + "/**/*", ['css']);
   // gulp.watch(paths.src.fonts + "/**/*", ['fonts']);
   gulp.watch(paths.src.js + "/**/*", ['js']);
   gulp.watch(paths.src.images + "/**/*.{gif,jpg,png,svg}", ['images']);
+
 });
