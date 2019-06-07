@@ -16,14 +16,14 @@
 .hero_text h4 {
     font-family: 'Work Sans';
     font-size: 16px;
-    margin-bottom: 20px
+    margin-bottom: 20px;
 }
 
 .hero_text p {
     font-size: 16px;
     line-height: 30px;
     font-family: Lato;
-    font-weight: 300
+    font-weight: 300;
 }
 
 .hero_text p span.triggerClose {
@@ -41,7 +41,7 @@
 .calText {
     padding-left: 20px;
     margin-top: 20px;
-    display: inline-block
+    display: inline-block;
 }
 
 #small-hero-image-cont img {
@@ -55,6 +55,15 @@
     }
 }
 
+
+// tablet both orientations
+@media all and (min-width: 480px) and (max-width: 1024px) {
+    .hero_text p {
+        font-size: 16px !important;
+    }
+}
+
+// tablet and up
 @media only screen and (min-width:40.063em) {
     .hero_textCont {
         padding: 0 60px;
@@ -64,6 +73,11 @@
     .hero_textCont .hero_text {
         margin: 0
     }
+
+    .hero_text p {
+        font-size: 19px;
+    }
+
     .hero_image {
         height: 100vh;
         background-image: url(../images/nickCal_compressed.jpg);
