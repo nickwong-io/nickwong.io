@@ -24,7 +24,7 @@
     font-weight: 700;
 }
 
-.hero_text p, ul{
+.hero_text p, ul, li {
     font-size: 1em;
     line-height: 30px;
     font-family: 'Lato';
@@ -55,7 +55,7 @@
 
 // tablet both orientations
 @media all and (min-width: 480px) and (max-width: 1024px) {
-    .hero_text p {
+    .hero_text p, ul, li {
         font-size: 1em !important;
     }
 }
@@ -71,13 +71,9 @@
         margin: 0
     }
 
-    .hero_text p {
-        margin-bottom: 10px;
-        line-height: 25px;
-    }
-
-    .hero_text p, ul {
+    .hero_text p, ul, li {
         font-size: 1em;
+        margin-bottom: 10px;
     }
 
     .hero_text h3 {
@@ -100,6 +96,7 @@
 
     .hero_text p, ul {
         font-size: 1.25em;
+        line-height: 35px;
     } 
 } 
 

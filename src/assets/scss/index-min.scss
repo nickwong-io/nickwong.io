@@ -20,18 +20,18 @@
 }
 
 .hero_text p {
-    font-size: 16px;
+    font-size: 1em;
     line-height: 30px;
-    font-family: Lato;
+    font-family: 'Lato';
     font-weight: 300;
 }
 
 .hero_text p span.triggerClose {
-    color: red
+    color: red;
 }
 
 .hero_text #alohaFriday {
-    display: none
+    display: none;
 }
 
 #cal {
@@ -59,7 +59,7 @@
 // tablet both orientations
 @media all and (min-width: 480px) and (max-width: 1024px) {
     .hero_text p {
-        font-size: 16px !important;
+        font-size: 1em !important;
     }
 }
 
@@ -75,7 +75,7 @@
     }
 
     .hero_text p {
-        font-size: 15px;
+        font-size: 1em;
     }
 
     .hero_image {
@@ -91,3 +91,17 @@
         transform: translate(-50%, -50%)
     }
 }
+
+/* min-width 641px, medium screens (tablet) and up */
+@media only screen and (min-width:40.063em) {
+
+
+}
+
+/* min-width 1441px, xlarge screens */
+@media only screen and (min-width: 90.063em) { 
+    .hero_text p {
+        font-size: 1.25em;
+    }
+}
+
