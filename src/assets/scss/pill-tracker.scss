@@ -15,12 +15,17 @@
 
 .hero_text h4 {
     font-family: 'Work Sans';
-    font-size: 16px;
+    font-size: 1em;
     margin-bottom: 20px;
 }
 
+.hero_text h3 {
+    font-family: 'Lato';
+    font-weight: 700;
+}
+
 .hero_text p, ul{
-    font-size: 16px;
+    font-size: 1em;
     line-height: 30px;
     font-family: 'Lato';
     font-weight: 300;
@@ -47,14 +52,15 @@
 }
 
 
+
 // tablet both orientations
 @media all and (min-width: 480px) and (max-width: 1024px) {
     .hero_text p {
-        font-size: 16px !important;
+        font-size: 1em !important;
     }
 }
 
-// tablet and up
+/* min-width 641px, medium screens (tablet) and up */
 @media only screen and (min-width:40.063em) {
     .hero_textCont {
         padding: 0 60px;
@@ -71,13 +77,11 @@
     }
 
     .hero_text p, ul {
-        font-size: 15px;
+        font-size: 1em;
     }
 
     .hero_text h3 {
         font-size: 20px;
-        font-weight: 700;
-        font-family: 'Lato';
         margin-bottom: 0px;
     }
 
@@ -90,3 +94,13 @@
     }
 
 }
+
+/* min-width 1441px, xlarge screens */
+@media only screen and (min-width: 90.063em) {
+
+    .hero_text p, ul {
+        font-size: 1.25em;
+    } 
+} 
+
+
