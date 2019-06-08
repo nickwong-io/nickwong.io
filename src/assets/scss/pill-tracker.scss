@@ -65,8 +65,20 @@
         margin: 0
     }
 
+    .hero_text p {
+        margin-bottom: 10px;
+        line-height: 25px;
+    }
+
     .hero_text p, ul {
-        font-size: 19px;
+        font-size: 15px;
+    }
+
+    .hero_text h3 {
+        font-size: 20px;
+        font-weight: 700;
+        font-family: 'Lato';
+        margin-bottom: 0px;
     }
 
     .hero_image {
