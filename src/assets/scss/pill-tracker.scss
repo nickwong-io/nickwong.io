@@ -2,15 +2,15 @@
     width: 100%;
     margin-left: auto;
     margin-right: auto;
-    max-width: initial
+    max-width: initial;
 }
 
 .hero_textCont {
-    padding: 0 30px
+    padding: 0 30px;
 }
 
 .hero_text {
-    margin: 30px 0
+    margin: 30px 0;
 }
 
 .hero_text h4 {
@@ -71,9 +71,13 @@
         margin: 0
     }
 
-    .hero_text p, ul, li {
+    .hero_text p, ul {
         font-size: 1em;
         margin-bottom: 10px;
+    }
+
+    .hero_text li {
+        font-size: 1em;
     }
 
     .hero_text h3 {
@@ -94,8 +98,8 @@
 /* min-width 1441px, xlarge screens */
 @media only screen and (min-width: 90.063em) {
 
-    .hero_text p, ul {
-        font-size: 1.25em;
+    .hero_text p, ul, li {
+        font-size: 20px;
         line-height: 35px;
     } 
 } 
