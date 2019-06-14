@@ -57,13 +57,13 @@ function hasItemsLater(map, row) {
 	}
 }
 
-/* Delete next item occuring after given row */
+/* HIDE next item occuring after given row */
 function deleteFromNext(map, row) {
 
 	if (!hasNext(map, row)) {
 		return null;
 	} else if (hasItems(map, row + 1)) {
-		// remove one from that row starting at the back
+		// HIDE one from that row starting at the back
 		if ($(map[row + 1].children[2]).css("display") != "none") {
 			$(map[row + 1].children[2]).css("display", "none");
 			return $(map[row + 1].children[2]);
@@ -97,7 +97,6 @@ function rearrange(map, row) {
 		// HANDLE SLOT ZERO
 		// set empty one to an x
 		if ($(map[row].children[0]).css("display") == "none" && hasItemsLater(map, row)) {
-			
 			var toDelete = deleteFromNext(map, row);
 			$(map[row].children[0]).replaceWith(toDelete.wrap('<p/>').parent().html());
 			$(toDelete).unwrap();
