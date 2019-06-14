@@ -160,9 +160,9 @@ function rearrange(map, row) {
 	$(map[0].children[1]).css("display", "block"); // shows that square again
 */
 
-// $('#all').click(function() {
-// 	hideAllExcept();
-// });
+$('#all').click(function() {
+	hideAllExcept();
+});
 $('#adventure').click(function() {
 	hideAllExcept();
 	hideAllExcept("adventure");
@@ -173,16 +173,16 @@ $('#coding').click(function() {
 	hideAllExcept("coding");
 	rearrange(map, 0);
 });
-// $('#design').click(function() {
-// 	hideAllExcept();
-// 	hideAllExcept("design");
-// 	rearrange(map, 0);
-// });
-// $('#entrepreneurship').click(function() {
-// 	hideAllExcept();
-// 	hideAllExcept("entrepreneurship");
-// 	rearrange(map, 0);
-// });
+$('#design').click(function() {
+	hideAllExcept();
+	hideAllExcept("design");
+	rearrange(map, 0);
+});
+$('#entrepreneurship').click(function() {
+	hideAllExcept();
+	hideAllExcept("entrepreneurship");
+	rearrange(map, 0);
+});
 
 
 // Either hides all cards except those that match class of query or shows all cards.

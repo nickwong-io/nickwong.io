@@ -1,9 +1,5 @@
 @media only screen {
     .hero1 .filterContainer {
-        margin-top: 20px;
-        display: flex; 
-        flex-direction: column; 
-        justify-content: flex-start; 
         color: #7d7d7d;
 
         p {
@@ -259,5 +255,9 @@
         width: 303px;
         height: 202px;
         padding: 0
+    }
+
+    .hero1 .filterContainer {
+        margin-top: 20px;
     }
 }
