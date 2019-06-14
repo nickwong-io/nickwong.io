@@ -97,27 +97,50 @@ function rearrange(map, row) {
 		// HANDLE SLOT ZERO
 		// set empty one to an x
 		if ($(map[row].children[0]).css("display") == "none" && hasItemsLater(map, row)) {
+			// hides the next available card
 			var toDelete = deleteFromNext(map, row);
+			// saves the slot's hidden card html
+			var slotHiddenCard = $(map[row].children[1]);
+
+			// replaces empty slot with the card that was deleted
 			$(map[row].children[0]).replaceWith(toDelete.wrap('<p/>').parent().html());
-			$(toDelete).unwrap();
+
 			$(map[row].children[0]).css("display", "block");
+			$(toDelete).unwrap();
+			$(toDelete[0]).replaceWith(slotHiddenCard[0]);
 		}
+
 
 		// HANDLE SLOT ONE
 		// set empty one to an x
 		if ($(map[row].children[1]).css("display") == "none" && hasItemsLater(map, row)) {
+			// hides the next available card
 			var toDelete = deleteFromNext(map, row);
+			// saves the slot's hidden card html
+			var slotHiddenCard = $(map[row].children[1]);
+
+			// replaces empty slot with the card that was deleted
 			$(map[row].children[1]).replaceWith(toDelete.wrap('<p/>').parent().html());
-			$(toDelete).unwrap();
+
 			$(map[row].children[1]).css("display", "block");
+			$(toDelete).unwrap();
+			$(toDelete[0]).replaceWith(slotHiddenCard[0]);
 		}
+
 
 		// HANDLE SLOT TWO
 		if ($(map[row].children[2]).css("display") == "none" && hasItemsLater(map, row)) {
+			// hides the next available card
 			var toDelete = deleteFromNext(map, row);
+			// saves the slot's hidden card html
+			var slotHiddenCard = $(map[row].children[1]);
+
+			// replaces empty slot with the card that was deleted
 			$(map[row].children[2]).replaceWith(toDelete.wrap('<p/>').parent().html());
-			$(toDelete).unwrap();
+
 			$(map[row].children[2]).css("display", "block");
+			$(toDelete).unwrap();
+			$(toDelete[0]).replaceWith(slotHiddenCard[0]);
 		}
 
 		return rearrange(map, row + 1);
@@ -135,29 +158,29 @@ function rearrange(map, row) {
 	$(map[0].children[1]).css("display", "block"); // shows that square again
 */
 
-$('#all').click(function() {
-	hideAllExcept();
-});
-$('#adventure').click(function() {
-	hideAllExcept();
-	hideAllExcept("adventure");
-	// rearrange(map, 0);
-});
-$('#coding').click(function() {
-	hideAllExcept();
-	hideAllExcept("coding");
-	// rearrange(map, 0);
-});
-$('#design').click(function() {
-	hideAllExcept();
-	hideAllExcept("design");
-	// rearrange(map, 0);
-});
-$('#entrepreneurship').click(function() {
-	hideAllExcept();
-	hideAllExcept("entrepreneurship");
-	// rearrange(map, 0);
-});
+// $('#all').click(function() {
+// 	hideAllExcept();
+// });
+// $('#adventure').click(function() {
+// 	hideAllExcept();
+// 	hideAllExcept("adventure");
+// 	rearrange(map, 0);
+// });
+// $('#coding').click(function() {
+// 	hideAllExcept();
+// 	hideAllExcept("coding");
+// 	rearrange(map, 0);
+// });
+// $('#design').click(function() {
+// 	hideAllExcept();
+// 	hideAllExcept("design");
+// 	rearrange(map, 0);
+// });
+// $('#entrepreneurship').click(function() {
+// 	hideAllExcept();
+// 	hideAllExcept("entrepreneurship");
+// 	rearrange(map, 0);
+// });
 
 
 // Either hides all cards except those that match class of query or shows all cards.
@@ -180,4 +203,3 @@ function hideAllExcept(query) {
 		}
 	}
 }
-
