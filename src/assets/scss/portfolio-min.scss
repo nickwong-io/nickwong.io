@@ -1,6 +1,30 @@
 @media only screen {
-    .hero1 .filterContainer {
+    #filter {
+        text-align: left;
+        font-family: 'Work Sans';
+        margin-left: 15px;
         color: #7d7d7d;
+        font-size: 1.25em;
+    }
+
+    .hero1 .filterContainer {
+        margin-bottom: 20px;
+        display: flex;
+        flex-direction: row;
+        justify-content: flex-start;
+        color: #7d7d7d;
+
+        div {
+            min-width: 160px;
+
+            div:hover {
+                border: 2px solid #7d7d7d;
+                border-radius: 5px;
+                padding-left: 5px;
+
+            }
+
+        }
 
         p {
             margin: 0px; 
@@ -14,12 +38,10 @@
             display: inline;
         }
 
-        div:hover {
-            border: 2px solid #7d7d7d;
-            border-radius: 5px;
-            padding-left: 5px;
-
+        #entrepreneurship {
+            min-width: 160px;
         }
+
     }
 
     .hero1 {
@@ -49,7 +71,7 @@
         width: 150px;
         height: 2.4rem;
         border: 2px solid #000;
-        margin: 50px 0;
+        margin: 40px 0;
         display: inline-block
     }
     .row .sign h1 {
@@ -257,7 +279,14 @@
         padding: 0
     }
 
+    #filter {
+        margin-top: 20px;
+        margin-bottom: -20px;
+    }
+
     .hero1 .filterContainer {
         margin-top: 20px;
+        margin-bottom: 20px;
+        display: block;
     }
 }
