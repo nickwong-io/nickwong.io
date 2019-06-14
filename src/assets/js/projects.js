@@ -2,10 +2,6 @@ $(document).foundation();
 
 categories = ['adventure', 'coding', 'design', 'entrepreneurship'];
 
-$('.entrepreneurship').css("display", "none");
-// $('.coding').css("display", "none");
-
-
 // 2D array of children;
 map = $('.map').children();
 
@@ -132,8 +128,6 @@ function rearrange(map, row) {
 
 }
 
-rearrange(map, 0);
-
 
 /* the magic lines
 	var toDelete = deleteFromNext(map, 0); // deletes and saves item
@@ -141,3 +135,50 @@ rearrange(map, 0);
 	$(toDelete).unwrap(); // cleans up the p wrapper left behind
 	$(map[0].children[1]).css("display", "block"); // shows that square again
 */
+
+$('#all').click(function() {
+	hideAllExcept();
+});
+$('#adventure').click(function() {
+	hideAllExcept();
+	hideAllExcept("adventure");
+	// rearrange(map, 0);
+});
+$('#coding').click(function() {
+	hideAllExcept();
+	hideAllExcept("coding");
+	// rearrange(map, 0);
+});
+$('#design').click(function() {
+	hideAllExcept();
+	hideAllExcept("design");
+	// rearrange(map, 0);
+});
+$('#entrepreneurship').click(function() {
+	hideAllExcept();
+	hideAllExcept("entrepreneurship");
+	// rearrange(map, 0);
+});
+
+
+// Either hides all cards except those that match class of query or shows all cards.
+function hideAllExcept(query) {
+	if (query == null) {
+		for (var i = 0; i < map.length; i++) {
+			for (var j = 0; j < 3; j++) {
+				if (!($(map[i].children[j]).hasClass(query))) {
+					$(map[i].children[j]).css("display", "block");
+				}
+			}
+		}
+	} else {
+		for (var i = 0; i < map.length; i++) {
+			for (var j = 0; j < 3; j++) {
+				if (!($(map[i].children[j]).hasClass(query))) {
+					$(map[i].children[j]).css("display", "none");
+				}
+			}
+		}
+	}
+}
+
