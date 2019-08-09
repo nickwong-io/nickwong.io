@@ -68,7 +68,7 @@
     .hero_textCont {
         padding: 0 60px;
         display: flex;
-        align-items: center
+        align-items: center;
     }
     .hero_textCont .hero_text {
         margin: 0
@@ -82,7 +82,12 @@
         height: 100vh;
         background-image: url(../images/nickCal_compressed.jpg);
         background-size: cover;
-        background-position: 50% 75%
+        background-position: 50% 75%;
+        margin-top: 0px !important;
+    }
+    .hero_text h4 {
+        margin-top: 20px;
+        margin-bottom: 0px;
     }
     .boom {
         position: absolute;
