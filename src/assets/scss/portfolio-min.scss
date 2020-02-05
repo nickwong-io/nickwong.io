@@ -137,15 +137,15 @@
         white-space: nowrap
     }
     .card .desc:after {
-        content: "";
-        height: 25px;
-        right: 0;
-        background: -moz-linear-gradient(left, rgba(255, 255, 255, 0) 0, #fff 56%, #fff 100%);
-        background: -webkit-gradient(linear, left top, right top, color-stop(0, rgba(255, 255, 255, 0)), color-stop(56%, #fff), color-stop(100%, #fff));
-        background: -webkit-linear-gradient(left, rgba(255, 255, 255, 0) 0, #fff 56%, #fff 100%);
-        background: -o-linear-gradient(left, rgba(255, 255, 255, 0) 0, #fff 56%, #fff 100%);
-        background: -ms-linear-gradient(left, rgba(255, 255, 255, 0) 0, #fff 56%, #fff 100%);
-        background: linear-gradient(left, rgba(255, 255, 255, 0) 0, #fff 56%, #fff 100%);
+        // content: "";
+        // height: 25px;
+        // right: 0;
+        // background: -moz-linear-gradient(left, rgba(255, 255, 255, 0) 0, #fff 56%, #fff 100%);
+        // background: -webkit-gradient(linear, left top, right top, color-stop(0, rgba(255, 255, 255, 0)), color-stop(56%, #fff), color-stop(100%, #fff));
+        // background: -webkit-linear-gradient(left, rgba(255, 255, 255, 0) 0, #fff 56%, #fff 100%);
+        // background: -o-linear-gradient(left, rgba(255, 255, 255, 0) 0, #fff 56%, #fff 100%);
+        // background: -ms-linear-gradient(left, rgba(255, 255, 255, 0) 0, #fff 56%, #fff 100%);
+        // background: linear-gradient(left, rgba(255, 255, 255, 0) 0, #fff 56%, #fff 100%);
     }
     .card .action {
         border-top: 1px solid rgba(160, 160, 160, .2);
