@@ -5,12 +5,21 @@
     max-width: initial
 }
 
-.hero_textCont {
-    padding: 0 30px
+// ========== temporary internship banner ==========
+.announcement_banner {
+    position: relative; 
+    top: 0; 
+    background: #FFD700; 
+    width: 100%; 
+    margin: 0; 
+    text-align: center; 
+    padding: 20px 10px; 
+    font-family: 'Work Sans';
+    margin-bottom: 20px;
 }
 
-.hero_text {
-    margin: 30px 0
+.hero_textCont {
+    padding: 0 30px
 }
 
 .hero_text h4 {
@@ -40,13 +49,52 @@
 
 .calText {
     padding-left: 20px;
-    margin-top: 20px;
+    margin: 0px;
     display: inline-block;
 }
 
 #small-hero-image-cont img {
     padding: 0 30px;
     margin-bottom: 30px
+}
+
+.after-image-block {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.social-icons-cont {
+
+    margin: 30px 0px;
+    display: flex;
+
+    .social-icon {
+        width: 40px;
+        height: 40px;
+        border-radius: 100%;
+        background: red;
+        margin: 0px 5px;
+
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+
+    .twitter {
+        background: #08a0e9;
+        color: white;
+    }
+
+    .linkedin {
+        background: #0077B5;
+        color: white;
+    }
+
+    .instagram {
+        background: #EA0062;
+        color: white;
+    }
 }
 
 @media only screen and (min-device-width:375px) and (max-device-width:736px) and (-webkit-min-device-pixel-ratio:2) and (orientation:landscape) {
@@ -65,6 +113,13 @@
 
 // tablet and up
 @media only screen and (min-width:40.063em) {
+
+    // ========== temporary internship banner ==========
+    .announcement_banner {
+        position: absolute;
+        margin-bottom: 0px;
+    }
+
     .hero_textCont {
         padding: 0 60px;
         display: flex;
@@ -80,13 +135,14 @@
 
     .hero_image {
         height: 100vh;
-        background-image: url(../images/nickCal_compressed.jpg);
+        // background-image: url(../images/nickCal_compressed.jpg);
+        background-image: url(../images/nick-art.jpg);
         background-size: cover;
         background-position: 50% 75%;
         margin-top: 0px !important;
+        z-index: -1 !important;
     }
     .hero_text h4 {
-        margin-top: 20px;
         margin-bottom: 0px;
     }
     .boom {
@@ -94,6 +150,13 @@
         top: 50%;
         left: 50%;
         transform: translate(-50%, -50%)
+    }
+    .social-icons-cont {
+        position: absolute;
+        bottom: 10px;
+        left: 10px;
+        display: flex;
+        margin: 0 0;
     }
 }
 
