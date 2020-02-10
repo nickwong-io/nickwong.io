@@ -7,15 +7,30 @@
 
 // ========== temporary internship banner ==========
 .announcement_banner {
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
     position: relative; 
     top: 0; 
     background: #FFD700; 
     width: 100%; 
     margin: 0; 
     text-align: center; 
-    padding: 20px 10px; 
-    font-family: 'Work Sans';
+    padding: 20px 15px; 
     margin-bottom: 20px;
+    z-index: 100;
+
+    h4 {
+        font-family: 'Work Sans';
+        margin-bottom: 0px;
+    }
+
+    i {
+        position: relative;
+        margin-left: 10px;
+    }
 }
 
 .hero_textCont {
@@ -25,7 +40,7 @@
 .hero_text h4 {
     font-family: 'Work Sans';
     font-size: 16px;
-    margin-bottom: 20px;
+    margin-bottom: 0px;
 }
 
 .hero_text p {
@@ -118,6 +133,12 @@
     .announcement_banner {
         position: absolute;
         margin-bottom: 0px;
+
+
+        i {
+            position: absolute;
+            right: 25px;
+        }
     }
 
     .hero_textCont {

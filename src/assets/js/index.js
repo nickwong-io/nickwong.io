@@ -15,3 +15,8 @@ if (n === 5) {
 	$('#alohaFriday').css("display", "unset")
 	$('#reg').css("display", "none")
 }
+
+function handleBanner() {
+	$('.announcement_banner').css("display", "none");
+
+}
