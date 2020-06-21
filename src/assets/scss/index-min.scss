@@ -33,6 +33,24 @@
     }
 }
 
+.dropdown-link {
+    text-decoration: underline;
+    color: #0a0a0a;
+}
+
+.current-positions-title {
+    font-size: 1.2em !important;
+    font-weight: 500 !important;
+    margin-bottom: 8px;
+}
+
+.current-positions {
+    font-size: 1em;
+    line-height: 28px;
+    font-family: 'Lato';
+    font-weight: 300;
+}
+
 .hero_textCont {
     padding: 0 30px
 }
@@ -50,22 +68,8 @@
     font-weight: 300;
 }
 
-.hero_text p span.triggerClose {
-    color: red;
-}
-
 .hero_text #alohaFriday {
     display: none;
-}
-
-#cal {
-    height: 50px
-}
-
-.calText {
-    padding-left: 20px;
-    margin: 0px;
-    display: inline-block;
 }
 
 #small-hero-image-cont img {
@@ -79,10 +83,22 @@
     align-items: center;
 }
 
+.cal {
+    height: 40px;
+    margin-left: 4px;
+}
+
+.calText-small {
+    padding-left: 20px;
+    margin: 0px;
+    display: inline-block;
+}
+
 .social-icons-cont {
 
     margin: 30px 0px;
     display: flex;
+    align-items: center;
 
     .social-icon {
         width: 40px;
@@ -110,6 +126,15 @@
         background: #EA0062;
         color: white;
     }
+
+    .calText-medium {
+        padding-left: 20px;
+        margin: 0px;
+        display: inline-block;
+        font-family: 'Lato';
+        color: white;
+        min-width: 100%;
+    }
 }
 
 @media only screen and (min-device-width:375px) and (max-device-width:736px) and (-webkit-min-device-pixel-ratio:2) and (orientation:landscape) {
@@ -121,9 +146,9 @@
 
 // tablet both orientations
 @media all and (min-width: 480px) and (max-width: 1024px) {
-    .hero_text p {
-        font-size: 1em !important;
-    }
+    // .hero_text p {
+    //     font-size: 1em;
+    // }
 }
 
 // tablet and up
@@ -150,9 +175,9 @@
         margin: 0
     }
 
-    .hero_text p {
-        font-size: 1em;
-    }
+    // .hero_text p {
+    //     font-size: 1em;
+    // }
 
     .hero_image {
         height: 100vh;
@@ -189,8 +214,8 @@
 
 /* min-width 1441px, xlarge screens */
 @media only screen and (min-width: 90.063em) { 
-    .hero_text p {
-        font-size: 1.25em;
-    }
+    // .hero_text p {
+    //     font-size: 1.25em;
+    // }
 }
 
