@@ -33,6 +33,21 @@
     }
 }
 
+.small-header-container {
+    .profile-pic {
+        height: 120px;
+        clip-path: circle(35px at center);   
+    }
+
+    p {
+        font-size: 1em;
+        line-height: 30px;
+        font-family: 'Lato';
+        font-weight: 300;
+        display: inline-block;
+    }
+}
+
 .dropdown-link {
     text-decoration: underline;
     color: #0a0a0a;
@@ -55,10 +70,9 @@
     padding: 0 30px
 }
 
-.hero_text h4 {
-    font-family: 'Work Sans';
-    font-size: 16px;
-    margin-bottom: 0px;
+.header {
+    margin-top: 32px;
+    margin-left: 4px;
 }
 
 .hero_text p {
@@ -66,10 +80,6 @@
     line-height: 30px;
     font-family: 'Lato';
     font-weight: 300;
-}
-
-.hero_text #alohaFriday {
-    display: none;
 }
 
 #small-hero-image-cont img {
@@ -143,12 +153,9 @@
     }
 }
 
-
 // tablet both orientations
 @media all and (min-width: 480px) and (max-width: 1024px) {
-    // .hero_text p {
-    //     font-size: 1em;
-    // }
+
 }
 
 // tablet and up
@@ -175,13 +182,13 @@
         margin: 0
     }
 
-    // .hero_text p {
-    //     font-size: 1em;
-    // }
+    .header {
+        margin-top: 32px;
+        margin-left: 0px;
+    }
 
     .hero_image {
         height: 100vh;
-        // background-image: url(../images/nickCal_compressed.jpg);
         background-image: url(../images/nick_blueprint.jpg);
         background-size: cover;
         background-position: 50% 75%;
@@ -214,8 +221,6 @@
 
 /* min-width 1441px, xlarge screens */
 @media only screen and (min-width: 90.063em) { 
-    // .hero_text p {
-    //     font-size: 1.25em;
-    // }
+
 }
 
