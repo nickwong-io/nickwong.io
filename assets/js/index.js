@@ -12,8 +12,7 @@ if (n === 5) {
 	$('#small-hero-image').attr("src", "assets/images/nicksGrad_compressed.jpg");
 
 	// header styles
-	$('#alohaFriday').css("display", "unset")
-	$('#reg').css("display", "none")
+	$('#reg').replaceWith("Happy Aloha Friday! 🤙🏼")
 }
 
 function handleBanner() {
