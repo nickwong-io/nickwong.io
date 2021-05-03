@@ -19,7 +19,7 @@
     "gulp-clean-css": "^4.2.0",
     "gulp-gh-pages": "^0.5.4",
     "gulp-sass": "^4.0.2",
-    "node-sass": "^4.12.0",
+    "node-sass": "^4.13.1",
     "require-dir": "^1.2.0",
     "run-sequence": "^1.1.5"
   }
