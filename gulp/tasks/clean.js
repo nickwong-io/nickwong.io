@@ -20,4 +20,5 @@ function deleteFolderRecursive(path) {
 gulp.task('clean', function() {
   deleteFolderRecursive(paths.base.dist);
   deleteFolderRecursive(paths.base.tmp);
+  return Promise.resolve();
 });

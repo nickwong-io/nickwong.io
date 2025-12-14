@@ -4,7 +4,8 @@ var gulp              = require('gulp'),
     paths             = require('../config').paths,
     errorHandler      = require('../config').swallowError,
     cleanCSS 		  = require('gulp-clean-css'),
-    sass 			  = require('gulp-sass');
+    sass 			  = require('gulp-sass')(require('sass'));
+
 //     browserReqs       = require('../config').browserReqs,
 //     sourcemaps        = require('gulp-sourcemaps'),
 //     postcss           = require('gulp-postcss'),
@@ -16,8 +17,6 @@ var gulp              = require('gulp'),
 //     postcssNested     = require('postcss-nested'),
 //     postcssPXtoREM    = require('postcss-pxtorem'),
 //     postcssSimpleVars = require('postcss-simple-vars');
-
-sass.compiler = require('node-sass');
 
 gulp.task('css', function() {
 
@@ -31,7 +30,7 @@ gulp.task('css', function() {
 //         autoprefixer({ browsers: browserReqs }),
 //         lost
 //       ];
-  return gulp.src(paths.src.scss + "/**/*.scss")
+  return gulp.src(paths.src.scss + "/**/*.scss", { allowEmpty: true })
     .pipe(sass().on('error', sass.logError))
     .pipe(cleanCSS({compatibility: 'ie8'}))
     .pipe(gulp.dest(paths.dist.css));

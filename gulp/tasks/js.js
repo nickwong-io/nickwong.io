@@ -1,6 +1,6 @@
 var gulp              = require('gulp'),
     paths             = require('../config').paths,
-    errorHandler      = require('../config').swallowError
+    errorHandler      = require('../config').swallowError;
 //     browserify        = require('browserify'),
 //     babel             = require('babel-core'),
 //     babelify          = require('babelify'),
@@ -26,7 +26,7 @@ gulp.task('js', function() {
 //     .pipe(gulp.dest(paths.dist.js + '/vendor'))
 //     .on('error', errorHandler);
 
-    return gulp.src(paths.src.js + '/*.js')
-        .pipe(gulp.dest(paths.dist.js)
-        .on('error', errorHandler));
+    return gulp.src(paths.src.js + '/*.js', { allowEmpty: true })
+        .on('error', errorHandler)
+        .pipe(gulp.dest(paths.dist.js));
 });
