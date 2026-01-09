@@ -34,8 +34,11 @@
 }
 
 .small-header-container {
+
+    margin: 12px auto;
+
     .profile-pic {
-        height: 120px;
+        height: 88px;
         clip-path: circle(35px at center);   
     }
 
@@ -76,8 +79,8 @@
 }
 
 .hero_text p {
-    font-size: 1em;
-    line-height: 30px;
+    font-size: 1.2em;
+    line-height: 32px;
     font-family: 'Lato';
     font-weight: 300;
 }
@@ -147,6 +150,37 @@
     }
 }
 
+// ========== Panes - Mobile (stacked, no transitions) ==========
+.panes-container {
+    width: 100%;
+}
+
+.pane {
+    width: 100%;
+    opacity: 1;
+    visibility: visible;
+    position: static;
+    margin-bottom: 30px;
+    
+    &:last-child {
+        margin-bottom: 0;
+    }
+}
+
+.pane-navigation {
+    display: none;
+}
+
+.pane ul {
+    margin: 16px auto;
+    font-family: 'Lato';
+    font-weight: 300;
+    list-style: none;
+    padding-left: 8px;
+    font-size: 1em;
+    list-style: none;
+}
+
 @media only screen and (min-device-width:375px) and (max-device-width:736px) and (-webkit-min-device-pixel-ratio:2) and (orientation:landscape) {
     .hideLandscape {
         display: none
@@ -177,9 +211,12 @@
         padding: 0 60px;
         display: flex;
         align-items: center;
+        width: 100%;
     }
     .hero_textCont .hero_text {
-        margin: 0
+        margin: 0;
+        position: relative;
+        width: 100%;
     }
 
     .header {
@@ -189,7 +226,7 @@
 
     .hero_image {
         height: 100vh;
-        background-image: url(../images/college/nick_blueprint_jacket.jpeg);
+        background-image: url(../images/nick_speaking.png);
         background-size: cover;
         background-position: 50% 75%;
         margin-top: 0px !important;
@@ -211,6 +248,75 @@
         display: flex;
         margin: 0 0;
     }
+
+    .pane ul {
+        font-weight: 300;
+        padding-left: 16px;
+        font-size: 1.2em;
+        margin: 8px 0;
+        line-height: 32px;
+    }
+
+    // ========== Pane Navigation System ==========
+    .pane-navigation {
+        position: absolute;
+        left: -30px;
+        top: 50%;
+        transform: translateY(-50%);
+        display: flex;
+        flex-direction: column;
+        gap: 20px;
+        z-index: 10;
+        align-items: center;
+    }
+
+    .nav-indicator {
+        width: 10px;
+        height: 10px;
+        background: #e5e7eb;
+        border-radius: 50%;
+        cursor: pointer;
+        transition: all 0.3s ease;
+        
+        &:hover {
+            transform: scale(1.2);
+            opacity: 0.8;
+        }
+        
+        &.active {
+            width: 6px;
+            height: 36px;
+            border-radius: 3px;
+        }
+    }
+
+    // Panes Container
+    .panes-container {
+        position: relative;
+        min-height: 300px;
+        max-height: 60vh;
+        width: 100%;
+        overflow: visible;
+    }
+
+    .pane {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        opacity: 0;
+        visibility: hidden;
+        transform: translateY(15px);
+        transition: opacity 0.4s ease, transform 0.4s ease, visibility 0.4s;
+        pointer-events: none;
+        
+        &.active {
+            opacity: 1;
+            visibility: visible;
+            transform: translateY(0);
+            pointer-events: auto;
+        }
+    }
 }
 
 /* min-width 641px, medium screens (tablet) and up */
@@ -223,4 +329,3 @@
 @media only screen and (min-width: 90.063em) { 
 
 }
-
