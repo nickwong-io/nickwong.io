@@ -5,6 +5,37 @@ body {
   margin: 0 auto;
 }
 
+.header {
+  margin-top: 0rem;
+}
+.small-header-container {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: left;
+
+  p {
+    margin: 0 0 0 0.75rem;
+  }
+}
+
+.text-container {
+  margin-top: 1rem;
+  margin-bottom: 1.5rem;
+  p {
+    font-weight: 300;
+  }
+
+  a {
+    font-style: italic;
+    text-decoration: underline;
+  }
+
+  h2 {
+    margin-bottom: 1.5rem;
+  }
+}
+
 h1 {
   font-family: 'Work Sans', sans-serif;
   font-weight: 400;
@@ -16,7 +47,7 @@ h2 {
   font-family: 'Work Sans', sans-serif;
   font-weight: 400;
   font-size: 1.8rem;
-  margin-bottom: 1rem;
+  margin-bottom: 0rem;
   border-bottom: 2px solid #FFD700;
   display: inline-block;
   padding-bottom: 0.3rem;
@@ -29,9 +60,14 @@ ul {
 }
 
 li {
+  display: flex;
   margin: 1.2rem 0;
   font-size: 1.1rem;
   line-height: 1.6;
+
+  span {
+    padding-left: 0.3rem;
+  }
 }
 
 li:before {
