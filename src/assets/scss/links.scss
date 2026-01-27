@@ -8,11 +8,11 @@ body {
 #small-hero-image {
   height: 120px;
   width: 120px;
-  object-fit: cover;
-  object-position: center 20%;
+  background-image: url('../images/nick_speaking_square.png');
+  background-size: 90%;  // Zoom out (>100% = zoomed out, <100% = zoomed in)
+  background-position: center 80%;
   clip-path: circle(40px at center);
-  object-view-box: inset(-5rem -2rem -5rem -2rem);
-}
+} 
 
 .header {
   margin-top: 0rem;
