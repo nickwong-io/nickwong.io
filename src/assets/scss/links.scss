@@ -5,6 +5,15 @@ body {
   margin: 0 auto;
 }
 
+#small-hero-image {
+  height: 120px;
+  width: 120px;
+  background-image: url('../images/nick_speaking_square.png');
+  background-size: 90%;  // Zoom out (>100% = zoomed out, <100% = zoomed in)
+  background-position: center 80%;
+  clip-path: circle(40px at center);
+} 
+
 .header {
   margin-top: 0rem;
 }
