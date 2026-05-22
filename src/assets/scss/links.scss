@@ -1,8 +1,13 @@
 body {
-  font-family: 'Lato', sans-serif;
+  font-family: 'Work Sans', sans-serif;
+  font-weight: 400;
   padding: 2rem;
   max-width: 800px;
   margin: 0 auto;
+}
+
+a.back-link {
+  font-family: 'Work Sans', sans-serif;
 }
 
 #small-hero-image {
@@ -32,7 +37,7 @@ body {
   margin-top: 1rem;
   margin-bottom: 1.5rem;
   p {
-    font-weight: 300;
+    font-weight: 400;
   }
 
   a {
@@ -46,14 +51,14 @@ body {
 }
 
 h1 {
-  font-family: 'Work Sans', sans-serif;
+  font-family: 'Noto Serif JP', sans-serif;
   font-weight: 400;
   font-size: 2.5rem;
   margin-bottom: 1rem;
 }
 
 h2 {
-  font-family: 'Work Sans', sans-serif;
+  font-family: 'Noto Serif JP', sans-serif;
   font-weight: 400;
   font-size: 1.8rem;
   margin-bottom: 0rem;
@@ -73,6 +78,7 @@ li {
   margin: 1.2rem 0;
   font-size: 1.1rem;
   line-height: 1.6;
+  font-weight: 500;
 
   span {
     padding-left: 0.3rem;
