@@ -17,7 +17,7 @@ var gulp = require('gulp'),
     gulp.watch(paths.src.html + "/**/*.html", gulp.series('html'));
     gulp.watch(paths.src.images + "/**/*.svg", gulp.series('html'));
     gulp.watch(paths.src.scss + "/**/*", gulp.series('css'));
-    // gulp.watch(paths.src.fonts + "/**/*", gulp.series('fonts'));
+    gulp.watch(paths.src.fonts + "/**/*", gulp.series('fonts'));
     gulp.watch(paths.src.js + "/**/*", gulp.series('js'));
     gulp.watch(paths.src.images + "/**/*.{gif,jpg,png,svg}", gulp.series('images'));
     done();

@@ -1,3 +1,11 @@
+@font-face {
+  font-family: 'NickW Hand';
+  src: url('../fonts/NickW-Hand-Regular-1.0.otf') format('opentype');
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+}
+
 body {
   font-family: 'Work Sans', sans-serif;
   font-weight: 400;
@@ -63,14 +71,14 @@ a.back-link {
 }
 
 h1 {
-  font-family: 'Noto Serif JP', sans-serif;
+  font-family: 'NickW Hand', 'Noto Serif JP', sans-serif;
   font-weight: 400;
   font-size: 2.5rem;
   margin-bottom: 1rem;
 }
 
 h2 {
-  font-family: 'Noto Serif JP', sans-serif;
+  font-family: 'NickW Hand', 'Noto Serif JP', sans-serif;
   font-weight: 400;
   font-size: 1.8rem;
   margin-bottom: 0rem;
