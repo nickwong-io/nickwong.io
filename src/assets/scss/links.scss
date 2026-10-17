@@ -36,10 +36,14 @@ a.back-link {
   align-items: center;
   justify-content: left;
 
-  p {
+  .header {
     margin: 0 0 0 0.75rem;
-    font-family: 'Work Sans', sans-serif;
+    font-family: 'NickW Hand', 'Noto Serif JP', sans-serif;
     font-weight: 400;
+    font-size: 1.5rem;
+    border-bottom: 2px solid #FFD700;
+    display: inline-block;
+    padding-bottom: 0.3rem;
   }
 }
 
@@ -95,6 +99,7 @@ ul {
 
 li {
   display: flex;
+  flex-wrap: wrap;
   margin: 1.2rem 0;
   font-size: 1.1rem;
   line-height: 1.6;
@@ -102,6 +107,37 @@ li {
 
   span {
     padding-left: 0.3rem;
+  }
+
+  a {
+    font-style: italic;
+    text-decoration: underline;
+    text-underline-offset: 0.25em;
+    text-decoration-thickness: 1px;
+  }
+}
+
+.inline-media-embed {
+  flex: 1 1 100%;
+  width: 100%;
+  margin: 0.75rem 0 0 1.25rem;
+  max-width: 100%;
+
+  &[hidden] {
+    display: none;
+  }
+
+  iframe {
+    display: block;
+    width: 100%;
+    height: 152px;
+    border: 0;
+    border-radius: 12px;
+  }
+
+  &--video iframe {
+    height: auto;
+    aspect-ratio: 16 / 9;
   }
 }
 
@@ -137,6 +173,72 @@ a {
   display: inline-block;
   font-size: 0.9rem;
   color: #666;
+}
+
+body.media-overlay-open {
+  overflow: hidden;
+}
+
+.media-overlay {
+  position: fixed;
+  inset: 0;
+  z-index: 1000;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 1rem;
+  box-sizing: border-box;
+  background: rgba(0, 0, 0, 0.92);
+
+  &[hidden] {
+    display: none;
+  }
+}
+
+.media-overlay-close {
+  position: absolute;
+  top: 1rem;
+  right: 1rem;
+  z-index: 1001;
+  border: 0;
+  background: transparent;
+  color: #fff;
+  font-size: 2.5rem;
+  line-height: 1;
+  cursor: pointer;
+  padding: 0.25rem 0.5rem;
+
+  &:hover,
+  &:focus {
+    opacity: 0.85;
+    outline: 2px solid #FFD700;
+    outline-offset: 2px;
+  }
+}
+
+.media-overlay-frame-wrap {
+  width: 100%;
+  height: 100%;
+  max-width: min(100vw - 2rem, 1200px);
+  max-height: calc(100vh - 2rem);
+
+  iframe,
+  .media-overlay-video {
+    width: 100%;
+    height: 100%;
+    border: 0;
+    background: #000;
+    object-fit: contain;
+  }
+
+  iframe {
+    background: #fff;
+  }
+
+  iframe[hidden],
+  .media-overlay-video[hidden] {
+    display: none;
+  }
 }
 
 @media screen and (max-width: 640px) {

@@ -19,6 +19,6 @@ var gulp = require('gulp'),
     gulp.watch(paths.src.scss + "/**/*", gulp.series('css'));
     gulp.watch(paths.src.fonts + "/**/*", gulp.series('fonts'));
     gulp.watch(paths.src.js + "/**/*", gulp.series('js'));
-    gulp.watch(paths.src.images + "/**/*.{gif,jpg,png,svg}", gulp.series('images'));
+    gulp.watch(paths.src.images + "/**/*.{gif,jpg,png,svg,mov,mp4,webm}", gulp.series('images'));
     done();
   }));
